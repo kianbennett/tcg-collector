@@ -37,7 +37,7 @@ class Footer extends Component {
             <div id='footer'>
                 <span id='app-info'>
                     Created by <a href="https://twitter.com/_kianbennett" target="_blank" rel="noopener noreferrer" >@_kianbennett</a>
-                    {/* <span id='update-info'> | Database updated {lastUpdated}</span> */}
+                    <span id='credit-info'> | Powered by <a href='https://db.ygoprodeck.com/'target="_blank" rel="noopener noreferrer">YGOPRODeck</a></span>
                 </span>
                 <div id='pagination'>
                     <span id='results-info'>Found {resultsCount} cards [showing {numberLow + 1}-{numberHigh}]</span>

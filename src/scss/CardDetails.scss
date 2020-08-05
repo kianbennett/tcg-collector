@@ -1,9 +1,14 @@
 @import "variables";
 
-@media screen and (max-width: 790px) {
+@media screen and (max-width: 820px) {
 	.container {
-        width: 90% !important;
+        width: 80% !important;
         padding-bottom: 155px !important;
+
+        .card-data {
+            width: initial !important;
+            padding-left: 0px !important;
+        }
     }
 }
 
@@ -20,9 +25,11 @@
     position: relative;
 
     .card-info {
+        margin: auto;
         .gallery-area {
             text-align: center;
             // width: 40%;
+            margin: auto;
             margin-bottom: 20px;
             float: left;
 
