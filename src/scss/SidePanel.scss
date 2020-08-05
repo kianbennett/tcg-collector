@@ -1,0 +1,183 @@
+@import "variables";
+
+#side-panel {
+    float: left;
+    position: fixed;
+    left: 35px;
+    top: 90px;
+    width: 280px;
+    height: calc(100% - 150px);
+    padding: 15px;
+
+    box-shadow: 0px 4px 1px $background-colour4;
+    background: $background-colour2;
+    border-radius: 6px; // rounded corners
+
+    #search-area {
+        overflow: hidden;
+        margin-bottom: 20px;
+
+        #search-form {
+            height: 35px;
+
+            #search-box {
+                background-color: $background-colour3;
+                color: $text-colour;
+                border-radius: 4px 0px 0px 4px; // only left corners are rounded
+                box-shadow: inset 0px 3px 0px 0px $background-colour4;
+                z-index: 1; // so the search box doesn't cover the clear button
+                height: 100%;
+                width: calc(100% - 80px);
+                padding: 0px 30px 0px 10px; // left and right padding
+
+                &:hover {
+                    background: $background-colour4;
+                }
+            }
+
+            #button-submit {
+                background-color: $background-colour1;
+                float: right;
+                width: 40px;
+                height: 100%;
+                padding-top: 2px;
+                border-radius: 0px 4px 4px 0px;
+                color: $text-colour;
+                cursor: pointer;
+
+                &:hover {
+                    filter: brightness(1.15);
+                }
+            }
+        }
+
+        #button-cancel-search {
+            position: absolute;
+            right: 55px;
+            top: 15px;
+            width: 35px;
+            height: 35px;
+            padding-top: 2px; // make the x centered vertically
+
+            background: none;
+            border-radius: 4px;
+            color: grey;
+            z-index: 2; // so the clear button is always above search box
+            cursor: pointer;
+
+            &:hover {
+                color: $text-colour;
+            }
+        }
+    }
+
+    .scroll-area {
+        height: calc(100% - 185px);
+        margin-right: -8px;
+        padding-right: 8px;
+        padding-left: 5px;
+        overflow: auto;
+        // firefox scrollbar
+        scrollbar-width: thin;
+        scrollbar-color: $text-colour $background-colour3;
+
+        .collection-container {
+            margin: 15px 2px;
+            padding: 10px 10px;
+            background: $background-colour3;
+            border-radius: 6px;
+
+            .title {
+                padding-bottom: 8px;
+                float: left;
+            }
+
+            .arrow {
+                float: right;
+                position: relative;
+                bottom: 2px;
+                right: 2px;
+                font-size: 1.2em;
+            }
+
+            .collection-button, .deck-button {
+                position: relative; // needed so children can be positioned absolutely
+                width: 100%;
+                height: 35px;
+                text-align: left;
+                margin: 5px 0px;
+                background: $background-colour2;
+                box-shadow: inset 0 0 10px $background-colour1, 0px 3px 0px $background-colour4;
+                border-radius: 4px;
+                cursor: pointer;
+
+                .label {
+                    width: calc(100% - 50px);
+                    height: 100%;
+                    position: absolute;
+                    top: 0px;
+                    left: 32px;
+
+                    line-height: 35px;
+                    overflow: hidden;
+                    z-index: 0;
+                }
+
+                .colour-marker, .count {
+                    position: absolute;
+                    top: 6px;
+                    border: 2px solid $background-colour4;
+                    border-radius: 5px;
+                }
+
+                .colour-marker {
+                    float: left;
+                    width: 15px;
+                    height: 15px;
+                    top: 8px;
+                    left: 8px;
+                    background: orange;
+                }
+
+                .count {
+                    right: 28px;
+                    height: 20px;
+                    background: $background-colour3;
+
+                    font-size: 0.75em; // centres text horizontally
+                    line-height: 20px;
+                    padding: 0px 3px;
+                    z-index: 1;
+                }
+
+                // arrow
+                i {
+                    position: absolute;
+                    right: 10px;
+                    top: 8px;
+                    font-size: 1.2em;
+                }
+
+                &:hover {
+                    filter: brightness(1.15);
+                }
+            }
+
+            .deck-button {
+                border-radius: 15px;
+
+                .colour-marker {
+                    border-radius: 10px;
+                }
+            }
+        }
+
+        #container-coll {
+            height: 158px;
+        }
+
+        #container-decks {
+            height: 338px;
+        }
+    }
+}

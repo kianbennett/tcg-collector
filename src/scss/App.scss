@@ -1,0 +1,188 @@
+@import "variables";
+
+@media screen and (max-width: 790px) {
+	.content {
+        margin-top: 100px !important;
+    }
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    font-family: 'Nunito', sans-serif;
+    color: $text-colour;
+    text-shadow: 1px 1px $background-colour4;
+    user-select: none;
+
+	// for some reason adding a blur filter to the body or .app directly messes up rest of the styling
+	// so instead add it to each of the child elements
+    // .app > *:not(#card-details) {
+        // filter: blur(4px) brightness(0.7) sepia(0.5);
+    // }
+}
+
+#background {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: $background-colour3;
+}
+
+a {
+    text-decoration: none; // prevents underline
+    color: inherit; // prevents text changing colour
+}
+
+.loading-icon {
+    margin: auto;
+    top: 250px;
+    width: 60px;
+    height: 60px;
+    position: relative;
+    border: 12px solid $text-colour; /* Light grey */
+    border-top: 12px solid $background-colour3; /* Blue */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+}
+
+.card-icon {
+    width: auto;
+    height: 24px;
+    // border: 1px solid black;
+    border-radius: 4px; // rounded corners
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+}
+
+// Changes appearance of scrollbar
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    // box-shadow: inset 0 0 5px grey; 
+    background: $background-colour3;
+    border-radius: 10px;
+    margin: 10px 0px;
+}
+::-webkit-scrollbar-thumb {
+    background: $text-colour; 
+    border-radius: 10px;
+    // margin: 10px 0px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: $highlight-colour; 
+}
+
+// Removes all default styling from form elements
+button, input {
+	background-color: inherit;
+	color: inherit;
+	border: none;
+    font: inherit;
+    padding: inherit;
+    outline: inherit;
+    text-shadow: inherit;
+}
+
+select {
+    font-size: 0.85em;
+    background-color: $background-colour3;
+    color: $text-colour;
+    border: none;
+    border-radius: 6px;
+    box-shadow: inset 0px 3px 0px 0px $background-colour4;
+    // margin-left: 10px;
+}
+
+.divider-hori {
+	background: $background-colour3;
+	width: 100%;
+    height: 4px;
+    border-radius: 10px; // rounded corners
+}
+
+.content {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-top: 55px;
+    padding-top: 15px;
+    box-sizing: border-box;
+
+    overflow: auto;
+    // firefox scrollbar
+    scrollbar-width: thin;
+    scrollbar-color: $text-colour $background-colour4;
+
+    // mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 84%, rgba(0, 0, 0, 0) 92%);    
+}
+
+.labelled-dropdown {
+    height: 30px;
+    padding-left: 4px;
+    position: relative;
+    margin: 15px 0px;
+
+    .label {
+        float: left;
+        line-height: 30px; // centre label horizontally
+    }
+    
+    .button-dropdown {
+        float: right;
+        padding: 6px 8px;
+        background-color: $background-colour1;
+        border-radius: 4px;
+        margin: 0px;
+        box-shadow: 0px 3px 0px 0px $background-colour3;
+        transition: margin 0.1s, box-shadow 0.1s;
+		cursor: pointer;
+		
+		&:hover {
+        	filter: brightness(1.15);
+    	}
+
+    	&:active {
+        	margin-top: 3px;
+        	box-shadow: 0px 0px 0px 0px $background-colour3;
+    	}
+    }
+
+    .dropdown-content {
+        display: none;
+        float: right;
+        width: 160px;
+        position: absolute;
+        top: 40px;
+        right: 0px;
+        background-color: $background-colour3;
+        border: solid 1px $text-colour;
+        border-radius: 4px;
+        overflow: hidden;
+        box-shadow: 0px 4px 2px 0px $background-colour3;
+
+        a {
+            display: block;
+            padding: 7px;
+            i {
+                display: none;
+                float: right;
+            }
+        }
+        a:hover {
+            background-color: $background-colour1;
+        }
+
+        .active {
+            i {
+                display: block; // show tick on active item
+            }
+        }
+    }
+}

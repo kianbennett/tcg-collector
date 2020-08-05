@@ -1,0 +1,120 @@
+@import "variables";
+
+@media screen and (max-width: 790px) {
+	#card-area {
+        width: 95% !important;
+        padding-bottom: 155px !important;
+    }
+}
+
+#card-area {
+    padding-bottom: 110px;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex; // display the containers in a flex grid
+    justify-content: center; // space the grid evenly across the element width
+    flex-flow: row wrap; // wrap around when too close to eachother
+}
+
+.card-container, .card-container-empty {
+    border-radius: 6px; // rounded corners
+    margin: 6px 6px;
+    width: 145px;
+    height: 247px;
+    padding: 6px 8px 13px 8px;
+
+    &.collection {
+        width: 155px;
+        height: 190px;
+    }
+
+    &.deck {
+        height: 228px;
+    }
+}
+
+.card-container {
+    background: $background-colour2;
+    position: relative;
+    font-size: 0.75em;
+    
+    // inner glow
+    box-shadow: inset 0 0 10px $background-colour1, 0px 5px 1px $background-colour4;
+
+    cursor: pointer;
+    transition: filter 0.15s, transform 0.15s;
+
+    img {
+        max-width: 100%;
+        position: relative;
+        left: -2px;
+        margin-bottom: 6px;
+        box-shadow: 0px 2px 2px $background-colour3;
+        border: 2px solid $background-colour4;
+
+        border-radius: 6px; // rounded corners
+    }
+
+    .count {
+        position: absolute;
+        top: 3px;
+        right: 3px;
+        height: 20px;
+        background: rgb(46, 112, 68);
+        border: 2px solid $background-colour4;
+        box-shadow: inset 0 0 5px rgb(143, 255, 190);
+        border-radius: 5px;
+        font-size: 1.2em;
+        line-height: 20px;
+        padding: 2px 6px;
+        z-index: 5;
+    }
+
+    &:hover {
+        transform: scale(1.03);
+        filter: brightness(1.15);
+    }
+}
+
+.card-container-empty {
+    background: $background-colour4;
+    transform: scale(0.9);
+    // margin: 30px 20px 35px 20px;
+}
+
+#info-area {
+    width: 100%;
+    margin: 10px;
+    // background: white;
+
+    #button-return {
+        margin-right: 15px;
+        background: rgb(120, 120, 120);
+    }
+    #title {
+        position: relative;
+        top: 2px;
+        font-size: 1.4em;
+    }
+    #button-delete {
+        float: right;
+    }
+    button {
+        padding: 6px 8px;
+        background-color: $background-colour1;
+        border-radius: 4px;
+        box-shadow: 0px 3px 0px 0px $background-colour4;
+        transition: transform 0.1s, box-shadow 0.1s;
+        cursor: pointer;
+        
+        &:hover {
+            filter: brightness(1.15);
+        }
+
+        &:active {
+            transform: translateY(3px);
+            box-shadow: 0px 0px 0px 0px $background-colour4;
+        }
+    }
+}

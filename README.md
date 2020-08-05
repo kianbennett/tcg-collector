@@ -1,1 +1,1 @@
-# tcg-collector-react
+TCG-Collector

@@ -1,0 +1,104 @@
+@import "variables";
+
+@media screen and (max-width: 1170px) {
+	#update-info {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 790px) {
+	#app-info {
+		display: none !important;
+	}
+}
+
+@media screen and (max-width: 580px) {
+	#results-info {
+		display: none !important;
+	}
+}
+
+#footer {
+    height: 40px;
+    width: 100%;
+    bottom: 0px;
+    position: fixed;
+
+    color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(33,23,23,0.8);
+	// box-shadow: 0px -6px 8px rgba(0, 0, 0, 0.4);	
+	// border-top: $background-colour4 2px solid;
+
+    #app-info {
+        margin-left: 15px;
+        line-height: 40px;
+
+        a:hover {
+            color: white;
+            filter: brightness(1.2);
+            // font-weight: 600;
+            text-decoration: underline;
+        }
+    }
+    
+    #pagination {
+        margin-top: 1px;
+        margin-right: 20px;
+        float: right;
+    
+        #results-info {
+            margin-right: 15px;
+            margin-top: 4px;
+        }
+    
+        .button-page-nav, .button-page {
+            background: $background-colour1;
+            padding: 4px;
+            margin: 3px;
+            border-radius: 4px;
+            box-shadow: 0px 3px 0px 0px $background-colour4;
+        }
+    
+        .button-page-nav {
+            width: 22px;
+
+            &:disabled {
+                // background-color: $background-colour3;
+                filter: opacity(0.5);
+            }
+
+            &:not(:disabled) {
+                cursor: pointer;
+
+                &:hover {
+                    filter: brightness(1.15);
+                }
+            }
+        }
+    
+        .button-page {
+            min-width: 28px;
+            text-align: center;
+            height: 32px;
+            border-radius: 8px;
+    
+            // all .button-page elements that DON'T have the .button-page-active class
+            &:not(.button-page-active) {
+                background: $background-colour4;
+                box-shadow: none;
+                border-radius: 4px;
+                height: 30px;
+            }
+    
+            &.button-page-active {
+                background: $background-colour2;
+                box-shadow: none;
+            }
+        }
+    
+        .page-buttons {
+            display: inline-block;
+            margin: 0px 8px;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+@import 'variables.scss';
+
+#settings-panel {
+    position: fixed;
+    width: 630px;
+    left: calc(50% - 315px - 20px);
+    top: 80px;
+    padding: 20px;
+    background: $background-colour2;
+    box-shadow: 0px 4px 0px $background-colour4;
+    border-radius: 10px;
+    
+    p {
+        margin: 0;
+
+        a {
+            color: $highlight-colour;
+            &:hover {
+                text-decoration: underline;
+                filter: brightness(1.5);
+            }
+        }
+    }
+}

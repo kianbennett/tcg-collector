@@ -1,0 +1,258 @@
+@import "variables";
+
+@media only screen and (max-width: 1000px) {
+	#logo-full {
+		display: none;
+	}
+	#logo-small {
+		display: block !important;
+	}
+}
+
+@media screen and (max-width: 790px) {
+	#navbar {
+		height: 90px !important;
+		#logo-small {
+			margin-left: 10px !important;
+		}
+		.labelled-checkbox{
+			margin-right: 20px !important;	
+		}
+	}
+}
+
+#navbar {
+	position: fixed;
+	padding-top: 10px;
+	width: 100%;
+	height: 45px;
+
+	background-color: $background-colour2;
+	box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.4);	
+	border-bottom: $background-colour4 2px solid;
+	z-index: 1;
+
+	#logo-full, #logo-small {
+		float: left;
+		margin-left: 50px;
+		margin-top: -2px; // move the element up
+		padding-right: 20px;
+		max-height: 2.5em;
+	}
+
+	#logo-small {
+		display: none;
+	}
+
+	#button-return {
+		float: right;
+		background-color: $background-colour1;
+		position: relative;
+		top: 2px;
+		margin-right: 12px;
+		text-align: center;
+		font-size: 1.4em;
+		border-radius: 6px;
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
+		box-shadow: 0px 3px 0px $background-colour3;
+    	transition: top 0.05s linear, box-shadow 0.05s linear;
+    	cursor: pointer;  
+
+		&:hover {
+			filter: brightness(1.15);
+		}
+	
+		&:active {
+			top: 5px;
+			// top: 68px;
+			box-shadow: 0px 0px 0px 0px $background-colour4;
+		}
+	}
+
+	#search-area {
+        overflow: hidden;
+		margin-bottom: 20px;
+		width: 300px;
+		float: right;
+		margin-right: 10px;
+		position: relative;
+
+        #search-form {
+            height: 35px;
+
+            #search-box {
+                background-color: $background-colour3;
+                color: $text-colour;
+                border-radius: 4px 0px 0px 4px; // only left corners are rounded
+                box-shadow: inset 0px 3px 0px 0px $background-colour4;
+                z-index: 1; // so the search box doesn't cover the clear button
+                height: 100%;
+                width: calc(100% - 80px);
+                padding: 0px 30px 0px 10px; // left and right padding
+
+                &:hover {
+                    background: $background-colour4;
+                }
+            }
+
+            #button-submit {
+                background-color: $background-colour1;
+                float: right;
+                width: 40px;
+                height: 100%;
+                padding-top: 2px;
+                border-radius: 0px 4px 4px 0px;
+                color: $text-colour;
+                cursor: pointer;
+
+                &:hover {
+                    filter: brightness(1.15);
+                }
+            }
+        }
+
+        #button-cancel-search {
+            position: absolute;
+            right: 40px;
+            top: 0px;
+            width: 35px;
+            height: 35px;
+            padding-top: 2px; // make the x centered vertically
+
+            background: none;
+            border-radius: 4px;
+            color: grey;
+            z-index: 2; // so the clear button is always above search box
+            cursor: pointer;
+
+            &:hover {
+                color: $text-colour;
+            }
+        }
+    }
+
+	.dropdown {
+		a.dropdown-btn {
+			margin-right: 20px;
+			position: relative;
+			top: 8px;
+			float: right;
+			height: 30px;
+
+			i {
+				padding-left: 6px; // Moves caret icon to the right
+			}
+		}
+
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			right: 0px;
+			top: 45px;
+			float: right;
+			padding-top: 10px; // use padding to move buttons down so mouse doesn't leave element
+			border-radius: 0px 0px 0px 4px; // only round bottom left corner
+			overflow: hidden; // prevent hovered from exceeding border-radius
+			background-color: $background-colour2;
+			box-shadow: 0px 4px 1px rgba(0, 0, 0, 0.5);
+			z-index: 1; // always on top
+
+			a {
+				padding: 12px 10px;
+				display: block;
+
+				&:hover {
+					background-color: $background-colour1;	
+				}
+			}
+		}
+
+		.card-icon {
+			float: left;
+			position: relative;
+			bottom: 3px;
+			margin-right: 10px;
+			margin-bottom: -10px;
+		}
+
+		&:hover .dropdown-content {
+			display: block; // when hovering over dropdown (button or content) display the content
+		}
+	}
+
+	.labelled-checkbox {
+		float: right;
+		height: 30px;
+		padding-left: 4px;
+		margin-top: 3px;
+		margin-right: 40px;
+		// margin: 15px 0px;
+		// background: grey;
+	
+		.label {
+			float: left;
+			line-height: 30px; // centre label horizontally
+		}
+	
+		.checkbox {
+			position: absolute; // take default checkbox out of document flow
+			opacity: 0; // and hide it
+	
+			// this selector means .checkmark inside a label that comes after .checkbox
+			// a label element is used because it can be clicked to toggle a checkbox (meaning no js needed)
+			&:checked + label .checkmark { 
+				display: block; // show the tick when the checkbox is checked
+			}
+	
+			&:hover + label {
+				background: $background-colour4;
+			}
+		}
+	
+		label {
+			position: relative;
+			cursor: pointer;
+			padding: 0;
+			float: right;
+			width: 26px;
+			height: 26px;
+			margin-top: 2px;
+			margin-left: 8px;
+			background: $background-colour3;
+			box-shadow: 0px 3px 0px 0px inset $background-colour4;
+			border-radius: 4px;
+		}
+	
+		.checkmark {
+			display: none; // tick is hidden by default
+			position: absolute;
+			left: 3px;
+			top: 4px;
+			font-size: 1.2em; // enlarge the tick
+			pointer-events: none; // mouse ignores tick and clicks the checkbox underneath
+		}
+	}
+
+	.labelled-dropdown {
+		float: right;
+		height: 30px;
+		padding-left: 4px;
+		margin-top: 3px;
+		margin-right: 10px;
+
+		.label {
+			padding: 0px;
+			// font-size: .0em;
+		}
+
+		select {
+			margin-left: 10px;
+			float: right;
+			font-size: 1em;
+			width: 90px;
+			margin-top: 3px;
+		}
+	}
+}

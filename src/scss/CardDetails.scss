@@ -1,0 +1,326 @@
+@import "variables";
+
+@media screen and (max-width: 790px) {
+	.container {
+        width: 90% !important;
+        padding-bottom: 155px !important;
+    }
+}
+
+.container {
+    width: 80%;
+    max-width: 820px;
+    margin: auto;
+    margin-top: 2px;
+    padding: 16px;
+    margin-bottom: 80px;
+    background: $background-colour2;
+    box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+    position: relative;
+
+    .card-info {
+        .gallery-area {
+            text-align: center;
+            // width: 40%;
+            margin-bottom: 20px;
+            float: left;
+
+            img.card-image {
+                width: 240px;
+                border-radius: 6px;
+                box-shadow: 3px 3px 8px $background-colour3;
+                border: 2px solid $background-colour4;
+                display: block;
+            }
+
+            .gallery-nav {
+                margin-top: 15px;
+
+                #gallery-info {
+                    margin: 0px 15px;
+                }
+
+                .button-gallery-nav {
+                    position: relative;
+                    display: inline-block;
+                    width: 20px;
+                    height: 25px;
+                    top: 0px;
+                    background: $background-colour1;
+                    box-shadow: 0px 2px 0px $background-colour3;
+                    border-radius: 4px;
+                    transition: 0.05s top;
+                    cursor: pointer;
+
+                    &:hover {
+                        filter: brightness(1.15);
+                    }
+
+                    &:active {
+                        top: 2px;
+                        box-shadow: 0px 0px 0px 0px $background-colour3;
+                    }
+                }
+            }
+        }
+
+        .card-data {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            float: left;
+            width: calc(100% - 270px);
+            padding-left: 25px;
+
+            #card-data-details {
+                box-shadow: inset 0 0 10px $background-colour1, 0px 4px 0px $background-colour3;
+                padding: 8px;
+                border-radius: 6px;
+                border: 1px $highlight-colour solid;
+
+                #card-data-name {
+                    font-weight: 700;
+                    font-size: 1.4em;
+                }
+                #card-data-attribute-icon {
+                    width: 24px;
+                    float: right;
+                    filter: drop-shadow(3px 3px 1px $background-colour3);
+                    cursor: pointer;
+                    &:hover {
+                        filter: drop-shadow(3px 3px 1px $background-colour3) brightness(1.15);
+                    }
+                }
+                #card-data-level {
+                    margin-left: 4px;
+                    margin-top: 4px;
+
+                    .card-data-level-icon {
+                        width: 12px;
+                        filter: drop-shadow(2px 2px 1px $background-colour3);
+                    }
+                }
+                #card-data-stats {
+                    margin-top: 12px;
+                    font-weight: 600;
+
+                    display: flex;
+                    justify-content: space-between;
+
+                    // td:nth-child(3) {
+                        //padding-left: 100px;
+                    // }
+                    .stat-label {
+                        padding-right: 5px;
+                        color: rgba(255, 255, 255, 0.5);
+                        text-shadow: none;
+                        // text-align: right;
+                    }
+                    .stat-value-link {
+                        cursor: pointer;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+
+            #card-data-buttons {
+                margin-top: 10px;
+                display: flex;
+                justify-content: space-between;
+                padding: 4px;
+
+                a.card-data-link {
+                    position: relative;
+                    top: 0px;
+                    padding: 6px 8px;
+                    background: $background-colour1;
+                    border-radius: 4px;
+                    box-shadow: 0px 3px 0px $background-colour3;
+                    transition: top 0.05s linear, box-shadow 0.05s linear;
+                    cursor: pointer;
+
+                    img {
+                        width: 20px;
+                        margin-bottom: -4px;
+                        filter: drop-shadow(1px 1px 1px $background-colour3);
+                    }
+
+                    i {
+                        // padding: 0px 2px;
+                        padding-right: 2px;
+                    }
+
+                    &:not(:first-child) {
+                        padding-top: 7px;
+                    }
+
+                    &:hover {
+                        filter: brightness(1.15);
+                    }
+
+                    &:active {
+                        top: 3px;
+                        box-shadow: 0px 0px 0px 0px $background-colour3;
+                    }
+                }
+            }
+            
+            #card-data-desc {
+                margin-top: 10px;
+                margin-bottom: 10px;
+                padding: 10px;
+                padding-right: 14px;
+                padding-bottom: 12px;
+                background: $background-colour3;
+                box-shadow: inset 0px 3px 0px 0px $background-colour4;
+                border-radius: 6px;
+                text-align: justify;
+                // font-style: italic;
+                overflow-y: auto;
+                scrollbar-width: thin;
+                scrollbar-color: $text-colour $background-colour3;
+                white-space: pre-wrap;
+
+                .card-link {
+                    font-weight: 650;
+                    cursor: pointer;
+
+                    &:hover {
+                        filter: brightness(1.2);
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    #set-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        span {
+            display: inline-block;
+            // border: 1px solid black;
+        }
+
+        .header {
+            width: 100%;
+            padding: 4px;
+            // padding-left: 8px;
+            margin-bottom: 6px;
+            // width: calc(100% - 13px);
+            border: 1px $highlight-colour solid;
+            box-shadow: inset 0 0 8px $background-colour1, 0px 3px 0px $background-colour3;
+            // background-color: $background-colour2;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 1.1em;
+            // color: rgba(255, 255, 255, 0.6);
+        }
+
+        .table-contents {
+            height: 100%;
+            
+            .table-row, .table-row-condition {
+                padding: 4px;
+                border-radius: 8px;
+                // outline: 1px black solid;
+
+                position: relative;
+                float: left;
+                width: 100%;
+
+                &:nth-child(even) {
+                    background-color: rgba(0, 0, 0, 0.08);
+                }
+
+                .buttons {
+                    width: 68px;
+                    float: right;
+                }
+
+                .button-add, .button-remove {
+                    float: right;
+                    right: 5px;
+                    font-size: 1.4em;
+                    line-height: 20px;
+                    width: 24px;
+                    height: 20px;
+                    position: relative;
+                    margin-left: 4px;
+                    top: -2px;
+                    padding-bottom: 2px;
+                    border-radius: 10px;
+                    text-align: center;
+                    box-shadow: 0px 2px 0px $background-colour3;
+                    transition: top 0.03s linear, box-shadow 0.03s linear;
+                    cursor: pointer;
+
+                    &:hover {
+                        filter: brightness(1.15);
+                    }
+                    &:active {
+                        top: 0px;
+                        box-shadow: 0px 0px 0px 0px $background-colour3;
+                    }
+                }
+                .button-add {
+                    background-color: rgb(73, 134, 73);
+                }
+                .button-remove {
+                    background-color: rgb(156, 73, 73);
+                }
+            }
+
+            .table-row {
+                span {
+                    position: relative;
+                    float: left;   
+                    top: 2px;
+                }
+            }
+
+            .table-row-condition {
+                padding-top: 6px;
+                position: relative;
+
+                .count {
+                    margin-left: 10px;
+                }
+
+                .buttons {
+                    position: absolute;
+                    left: 120px;
+                }
+
+                select {
+                    margin-left: 20px;
+                }
+            }
+
+            .currency {
+                color: rgba(255, 255, 255, 0.6)
+            }
+        }
+
+        .header span:nth-child(1), .table-row span:nth-child(1) { width: 14%; }
+        .header span:nth-child(2), .table-row span:nth-child(2) { width: 46%; }
+        .header span:nth-child(3), .table-row span:nth-child(3) { width: 18%; }
+        .header span:nth-child(4), .table-row span:nth-child(4) { width: 11%; }
+        .header span:nth-child(5), .table-row span:nth-child(5) { width: 11%; }
+
+        // Click on price
+        .table-row span:nth-child(2), .table-row span:nth-child(4) { 
+            cursor: pointer;
+            &:hover {
+                text-decoration: underline;
+                // font-weight: bold;
+                filter: brightness(1.5);
+            }
+        }
+    }
+}
