@@ -1,0 +1,17 @@
+{
+  "main.css": "/tcg-collector/static/css/main.b475b72d.chunk.css",
+  "main.js": "/tcg-collector/static/js/main.302ab086.chunk.js",
+  "main.js.map": "/tcg-collector/static/js/main.302ab086.chunk.js.map",
+  "runtime~main.js": "/tcg-collector/static/js/runtime~main.48777f88.js",
+  "runtime~main.js.map": "/tcg-collector/static/js/runtime~main.48777f88.js.map",
+  "static/css/2.facd63ea.chunk.css": "/tcg-collector/static/css/2.facd63ea.chunk.css",
+  "static/js/2.7881c332.chunk.js": "/tcg-collector/static/js/2.7881c332.chunk.js",
+  "static/js/2.7881c332.chunk.js.map": "/tcg-collector/static/js/2.7881c332.chunk.js.map",
+  "index.html": "/tcg-collector/index.html",
+  "precache-manifest.dfa85dff47fdb4f953522b59df1f75fb.js": "/tcg-collector/precache-manifest.dfa85dff47fdb4f953522b59df1f75fb.js",
+  "service-worker.js": "/tcg-collector/service-worker.js",
+  "static/css/2.facd63ea.chunk.css.map": "/tcg-collector/static/css/2.facd63ea.chunk.css.map",
+  "static/css/main.b475b72d.chunk.css.map": "/tcg-collector/static/css/main.b475b72d.chunk.css.map",
+  "static/media/logo-full.png": "/tcg-collector/static/media/logo-full.99ad7ff7.png",
+  "static/media/logo2.png": "/tcg-collector/static/media/logo2.ec8c1cc5.png"
+}
