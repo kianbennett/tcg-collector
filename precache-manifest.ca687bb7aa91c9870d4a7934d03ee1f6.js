@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "b1da8dcf45ca24d45de7",
-    "url": "/tcg-collector/static/css/main.b475b72d.chunk.css"
+    "revision": "5fe12fbaebe471f2c51a",
+    "url": "/tcg-collector/static/css/main.f3dcf1f8.chunk.css"
   },
   {
-    "revision": "b1da8dcf45ca24d45de7",
-    "url": "/tcg-collector/static/js/main.302ab086.chunk.js"
+    "revision": "5fe12fbaebe471f2c51a",
+    "url": "/tcg-collector/static/js/main.676765b4.chunk.js"
   },
   {
     "revision": "36c189db67fa4c4309c4",
@@ -28,7 +28,7 @@ self.__precacheManifest = [
     "url": "/tcg-collector/static/media/logo-full.99ad7ff7.png"
   },
   {
-    "revision": "842601666c8a3d031431e8702f844007",
+    "revision": "4eea10408244d786e9696cd31235eb09",
     "url": "/tcg-collector/index.html"
   }
 ];

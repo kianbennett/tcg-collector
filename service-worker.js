@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/tcg-collector/precache-manifest.dfa85dff47fdb4f953522b59df1f75fb.js"
+  "/tcg-collector/precache-manifest.ca687bb7aa91c9870d4a7934d03ee1f6.js"
 );
 
 workbox.clientsClaim();
